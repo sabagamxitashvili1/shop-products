@@ -1,0 +1,17 @@
+<main>
+  <h1>🛒 მაღაზიის პროდუქტები</h1>
+
+  <div class="products">
+    @for (product of products; track product.name) {
+      <article class="card">
+        <span>{{ product.category }}</span>
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.price }} ₾</p>
+
+        <button type="button" (click)="product.showInfo()">
+          კონსოლში ჩვენება
+        </button>
+      </article>
+    }
+  </div>
+</main>
